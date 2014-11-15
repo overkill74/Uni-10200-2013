@@ -1,3 +1,4 @@
+#include "StdAfx.h"
 #include "utente.h"
 #include "Condominio.h"
 
@@ -5,7 +6,7 @@
 Condominio::Condominio(void)
   : m_nome("Condominio")
   , m_indirizzo("Indirizzo")
-  , m_citta("Citta")
+  , m_citta("Città")
 {
   m_lst_usr.clear();
 }

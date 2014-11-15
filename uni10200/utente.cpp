@@ -1,9 +1,8 @@
-#include "StdAfx.h"
 #include "radiatore.h"
 #include "utente.h"
 
 
-Utente::Utente(string& nome)
+Utente::Utente(string nome)
   : m_nome(nome)
   , m_scala("")
   , m_piano(0)
@@ -25,7 +24,7 @@ void Utente::addRadiatore(Radiatore* rad)
   m_lst_radiatori.push_back(rad);
 }
 
-bool Utente::getReportRadiatori(string& out_str)
+bool Utente::getReportRadiatori(string out_str)
 {
   out_str.clear();
 

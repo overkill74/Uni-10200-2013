@@ -1,4 +1,3 @@
-#include "StdAfx.h"
 #include <sstream>
 #include "ReportBase.h"
 
@@ -23,7 +22,7 @@ int ReportBase::getRowLen()
   return rs;
 }
 
-void ReportBase::add_item_to_str(string& out_str, string& param, size_t len)
+void ReportBase::add_item_to_str(string out_str, string param, size_t len)
 {
   if (param.length() <= len) {
     out_str.append(param);
@@ -41,7 +40,7 @@ void ReportBase::add_item_to_str(string& out_str, string& param, size_t len)
 }
 
 
-void ReportBase::add_item_to_str(string& out_str, int param, size_t len)
+void ReportBase::add_item_to_str(string out_str, int param, size_t len)
 {
   stringstream ss;
   ss << param;
@@ -56,7 +55,7 @@ void ReportBase::create()
   m_lst_item.push_back(ReportItem(string("Test"), 10));
 }
 
-void ReportBase::getHline(string& out_str)
+void ReportBase::getHline(string out_str)
 {
   for (list<ReportItem>::iterator it = m_lst_item.begin(); it != m_lst_item.end(); ++it) {
     int len = it->m_len;
@@ -68,7 +67,7 @@ void ReportBase::getHline(string& out_str)
   out_str += "\r\n";
 }
 
-void ReportBase::getDescRow(string& out_str)
+void ReportBase::getDescRow(string out_str)
 {
   getHline(out_str);
 

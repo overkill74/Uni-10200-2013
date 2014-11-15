@@ -1,4 +1,3 @@
-#include "StdAfx.h"
 #include "Condominio.h"
 #include "utente.h"
 #include "radiatore.h"
@@ -26,7 +25,7 @@ Utente* Engine::search_user(string& nome)
 }
 
 
-bool Engine::createCondominio(string& nome, string& indirizzo, string& citta)
+bool Engine::createCondominio(string nome, string indirizzo, string citta)
 {
   if (m_condominio) delete m_condominio;
   m_condominio = new Condominio();
@@ -40,7 +39,7 @@ bool Engine::createCondominio(string& nome, string& indirizzo, string& citta)
   return true;
 }
 
-bool Engine::addUser(string& nome, string& scala, int piano)
+bool Engine::addUser(string nome, string scala, int piano)
 {
   Utente* pu = search_user(nome);
 
@@ -61,7 +60,7 @@ Radiatore* Engine::allocRadiatore()
   return new Radiatore();
 }
   
-bool Engine::addRadiatore(string& ursname, Radiatore* rad)
+bool Engine::addRadiatore(string ursname, Radiatore* rad)
 {
   Utente* pu = search_user(ursname);
 
@@ -72,7 +71,7 @@ bool Engine::addRadiatore(string& ursname, Radiatore* rad)
   return true;
 }
 
-bool Engine::getReportUser(string& ursname, string& out_str)
+bool Engine::getReportUser(string ursname, string out_str)
 {
   Utente* pu = search_user(ursname);
 

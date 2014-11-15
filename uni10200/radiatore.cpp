@@ -1,4 +1,3 @@
-#include "StdAfx.h"
 #include <sstream>
 #include "radiatore.h"
 
@@ -44,7 +43,7 @@ Radiatore::~Radiatore(void)
   if (m_report) delete m_report;
 }
 
-void Radiatore::add_param(string& out_str, string& param, size_t len)
+void Radiatore::add_param(string out_str, string param, size_t len)
 {
   if (param.length() <= len) {
     out_str.append(param);
@@ -61,7 +60,7 @@ void Radiatore::add_param(string& out_str, string& param, size_t len)
   out_str.append(" | ");
 }
 
-void Radiatore::add_param(string& out_str, int param, size_t len)
+void Radiatore::add_param(string out_str, int param, size_t len)
 {
   stringstream ss;
   ss << param;
@@ -69,12 +68,12 @@ void Radiatore::add_param(string& out_str, int param, size_t len)
   add_param(out_str, ss.str(), len);
 }
 
-void Radiatore::getReportStringHead(string& rpt)
+void Radiatore::getReportStringHead(string rpt)
 {
   m_report->getDescRow(rpt);
 }
 
-void Radiatore::getReportString(string& rpt)
+void Radiatore::getReportString(string rpt)
 {
   add_param(rpt, m_locale, 16);
   add_param(rpt, m_descrizione, 40);

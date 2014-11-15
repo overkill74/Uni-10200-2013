@@ -14,12 +14,12 @@ public:
   Engine(void);
   ~Engine(void);
 
-  bool createCondominio(string& nome, string& indirizzo, string& citta);
-  bool addUser(string& nome, string& scala, int piano);
+  bool createCondominio(string nome, string indirizzo, string citta);
+  bool addUser(string nome, string scala, int piano);
   Radiatore* allocRadiatore();
-  bool addRadiatore(string& ursname, Radiatore* rad);
+  bool addRadiatore(string ursname, Radiatore* rad);
 
-  bool getReportUser(string& ursname, string& out_str);
+  bool getReportUser(string ursname, string out_str);
 
 private:
   Utente* search_user(string& nome);

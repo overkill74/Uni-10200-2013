@@ -25,13 +25,13 @@ public:
   Radiatore(void);
   virtual ~Radiatore(void);
 
-  void getReportStringHead(string& rpt);
-  void getReportString(string& rpt);
+  void getReportStringHead(string rpt);
+  void getReportString(string rpt);
   void getConteggi(int anno);
 
 private:
-  static void add_param(string& out_str, string& param, size_t len);
-  static void add_param(string& out_str, int param, size_t len);
+  static void add_param(string out_str, string param, size_t len);
+  static void add_param(string out_str, int param, size_t len);
 
 public:
   string         m_descrizione;

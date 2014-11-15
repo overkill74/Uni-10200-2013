@@ -26,11 +26,11 @@ public:
 class Utente
 {
 public:
-  Utente(string& nome);
+  Utente(string nome);
   ~Utente(void);
 
   void addRadiatore(Radiatore* rad);
-  bool getReportRadiatori(string& out_str);
+  bool getReportRadiatori(string out_str);
 
 public:
   string           m_nome;
